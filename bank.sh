@@ -15,28 +15,20 @@ while true; do
 
   case $option in
     1)
-      read -p "Enter deposit amount: " amount
-      balance=$((balance + amount))
-      echo "Deposited $amount. New Balance: $balance"
+      echo "Deposit section"
       ;;
     2)
-      read -p "Enter withdraw amount: " amount
-      if [ $amount -le $balance ]; then
-        balance=$((balance - amount))
-        echo "Withdrew $amount. New Balance: $balance"
-      else
-        echo "Insufficient funds"
-      fi
+      echo "Withdraw section"
       ;;
     3)
-      echo "Current Balance: $balance"
+      echo "Your current balance: $balance"
       ;;
     4)
-      echo "Goodbye"
+      echo "Goodbye!"
       exit 0
       ;;
     *)
-      echo "Invalid option"
+      echo "Invalid option — please choose 1–4"
       ;;
   esac
 done
